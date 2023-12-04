@@ -183,16 +183,14 @@
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
+        <span class="dnerf">MotionCrafter</span> can generate new videos with same the motion as the given reference.
       </h2>
     </div>
   </div>
 </section>
 
 
-<section class="hero is-light is-small">
+<!-- <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
@@ -247,7 +245,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <section class="section">
@@ -262,27 +260,13 @@
             deforming scene using photos/videos captured casually from mobile phones.
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            The essence of a video lies in its dynamic motions, including character actions, object movements, and camera movements. 
+            While text-to-video generative diffusion models have recently advanced in creating diverse contents, controlling specific motions through text prompts remains a significant challenge. A primary issue is the coupling of appearance and motion, often leading to overfitting on appearance. 
+            To tackle this challenge, we introduce MotionCrafter, a novel one-shot instance-guided motion customization method. 
+            MotionCrafter employs a parallel spatial-temporal architecture that injects the reference motion into the temporal component of the base model, while the spatial module is independently adjusted for character or style control. 
+            To enhance the disentanglement of motion and appearance, we propose an innovative dual-branch motion disentanglement approach, comprising a motion disentanglement loss and an appearance prior enhancement strategy. 
+            During training, a frozen base model provides appearance normalization, effectively separating appearance from motion and thereby preserving diversity. 
+            Comprehensive quantitative and qualitative experiments, along with user preference tests, demonstrate that MotionCrafter can successfully integrate dynamic motions while preserving the coherence and quality of the base model with a wide range of appearance generation capabilities.
           </p>
         </div>
       </div>
@@ -294,16 +278,18 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <video id="teaser" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/comparison.mp4"
+                type="video/mp4">
+          </video>
         </div>
       </div>
     </div>
-    <!--/ Paper video. -->
+    <!--/ Comparison video. -->
   </div>
 </section>
 
-
+<!-- 
 <section class="section">
   <div class="container is-max-desktop">
 
@@ -438,7 +424,7 @@
     <!--/ Concurrent Work. -->
 
   </div>
-</section>
+</section> -->
 
 
 <section class="section" id="BibTeX">
