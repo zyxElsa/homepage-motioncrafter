@@ -255,14 +255,15 @@
     <!-- Method -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3">MotionCrafter</h2>
         <div class="content has-text-justified">
           <p>                        
-            The overall pipeline of MotionCrafter.
-            We use a parallel spatial-temporal architecture to inject appearance and motion into the corresponding layers in a one-shot fine-tuning manner.
-            We introduce a frozen U-Net, which retains the basic model parameters.
-            During training, the temporally-tuned U-Net and the frozen U-Net receive the same text prompt for appearance enhancement.
-            The appearance normalization loss is used to enforce similarity between the two latents, while the temperal loss is calculated between the generated and reference latents.        
+            To decompose the appearance and motion of the generated videos, we propose a parallel spatial-temporal architecture.
+            It leverages two separate paths to learn the appearance and motion information from videos, corresponding to the spatial and temporal modules in the backbone of a text-to-video generation model.
+            To achieve better disentanglement, we further design a dual-branch motion disentanglement based on an information bottleneck.
+            We incorporate a frozen branch of the base model to serve as an appearance prior.
+            During training, the framework takes a reference video and enhanced textual conditioning as inputs and fine-tunes the trainable branch.
+            During inference, our framework takes user-provided textual conditioning as input and generates results that incorporate the reference video information using only the fine-tuned branch.   
     
           </p>
         </div>
