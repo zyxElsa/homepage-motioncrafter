@@ -252,6 +252,33 @@
     </div>
     <!--/ Abstract. -->
 
+    <!-- Method -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>                        
+            The overall pipeline of MotionCrafter.
+            We use a parallel spatial-temporal architecture to inject appearance and motion into the corresponding layers in a one-shot fine-tuning manner.
+            We introduce a frozen U-Net, which retains the basic model parameters.
+            During training, the temporally-tuned U-Net and the frozen U-Net receive the same text prompt for appearance enhancement.
+            The appearance normalization loss is used to enforce similarity between the two latents, while the temperal loss is calculated between the generated and reference latents.        
+    
+          </p>
+        </div>
+         <div class="hero-body">
+          <image id="pipeline" autoplay muted loop playsinline height="100%">
+            <source src="./static/images/pipeline2_00.png"
+                    type="image/png">
+          </image>
+          <h2 class="subtitle has-text-centered">
+            <span class="dnerf">The overall pipeline of MotionCrafter</span>.
+          </h2>
+        </div>
+      </div>
+    </div>
+    <!--/ Method -->
+
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
